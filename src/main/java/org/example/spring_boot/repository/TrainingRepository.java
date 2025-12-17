@@ -1,6 +1,6 @@
-package org.example.persistence.repository;
+package org.example.spring_boot.repository;
 
-import org.example.persistence.entity.TrainingEntity;
+import org.example.spring_boot.entity.TrainingEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

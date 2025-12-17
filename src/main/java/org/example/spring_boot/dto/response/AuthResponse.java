@@ -1,4 +1,4 @@
-package org.example.spring_boot.dto.response.AuthSerponse;
+package org.example.spring_boot.dto.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

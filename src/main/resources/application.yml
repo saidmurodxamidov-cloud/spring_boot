@@ -1,1 +1,21 @@
-spring.application.name=spring_boot
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:6432/test_db
+    username: root
+    password: root
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+      show-sql: false
+      format-sql: true
+      physical-strategy: org.example.persistence.config.SnakeCasePhysicalNamingStrategy
+
+logging:
+  level:
+    org.hibernate: INFO
+
+jwt:
+  secret: myVerySecretKeyThatIsAtLeast256BitsLongForHS256AlgorithmToWork
+  expiration: 86400000

@@ -1,4 +1,4 @@
-package org.example.util;
+package org.example.spring_boot.util;
 
 import java.util.Set;
 

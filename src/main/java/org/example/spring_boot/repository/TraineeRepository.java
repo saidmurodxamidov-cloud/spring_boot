@@ -1,6 +1,7 @@
-package org.example.persistence.repository;
+package org.example.spring_boot.repository;
 
-import org.example.persistence.entity.TraineeEntity;
+import org.example.spring_boot.entity.TraineeEntity;
+import org.example.spring_boot.entity.UserEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -16,4 +17,7 @@ public interface TraineeRepository extends JpaRepository<TraineeEntity,Long> {
     List<TraineeEntity> findByUserIsActive(boolean isActive);
 
     boolean existsByUserUserName(String username);
+
+
+
 }

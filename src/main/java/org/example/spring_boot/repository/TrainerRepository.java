@@ -1,6 +1,6 @@
-package org.example.persistence.repository;
+package org.example.spring_boot.repository;
 
-import org.example.persistence.entity.TrainerEntity;
+import org.example.spring_boot.entity.TrainerEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -15,7 +15,7 @@ public interface TrainerRepository extends JpaRepository<TrainerEntity,Long> {
     Optional<TrainerEntity> findByUserUserName(String username);
 
     @Query("SELECT t FROM TrainerEntity t WHERE t NOT IN " +
-            "(SELECT tr FROM TraineeEntity tn JOIN tn.trainers tr WHERE tn.user.userName = :traineeUsername)")
+            "(SELECT tr FROM TraineeEntity tn JOIN tn.trainers tr WHERE tn.user.userName = :traineeUsername AND t.user.isActive = true)")
     List<TrainerEntity> findTrainersNotAssignedToTrainee(@Param("traineeUsername") String traineeUsername);
 
     List<TrainerEntity> findByUserIsActive(boolean isActive);
@@ -23,5 +23,6 @@ public interface TrainerRepository extends JpaRepository<TrainerEntity,Long> {
     boolean existsByUserUserName(String username);
 
     Set<TrainerEntity> findByUserUserNameIn(List<String> usernames);
+
 
 }

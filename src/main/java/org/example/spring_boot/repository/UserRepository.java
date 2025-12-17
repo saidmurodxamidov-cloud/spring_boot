@@ -1,8 +1,7 @@
-package org.example.persistence.repository;
+package org.example.spring_boot.repository;
 
-import org.example.persistence.entity.UserEntity;
+import org.example.spring_boot.entity.UserEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
-
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 

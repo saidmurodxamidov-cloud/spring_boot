@@ -1,7 +1,6 @@
-package org.example.util;
+package org.example.spring_boot.util;
 
 import java.security.SecureRandom;
-import java.util.Arrays;
 
 public class PasswordGenerator {
 

@@ -1,4 +1,4 @@
-package org.example.spring_boot.entites;
+package org.example.spring_boot.entity;
 
 import org.springframework.security.core.GrantedAuthority;
 
