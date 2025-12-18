@@ -34,7 +34,7 @@ public class UserService implements UserDetailsService {
                 true,
                 true,
                 true,
-                user.getRoles() // make sure roles implement GrantedAuthority
+                user.getRoles()
         );
     }
     @Transactional
